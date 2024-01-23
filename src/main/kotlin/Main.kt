@@ -1,6 +1,8 @@
 package org.example
 
 import org.example.example.myapp.Aquarium
+import org.example.example.myapp.Plecostomus
+import org.example.example.myapp.Shark
 import org.example.example.myapp.TowerTank
 import java.util.Random
 
@@ -68,12 +70,21 @@ fun main() {
 
     // -----------------------Classes and Interfaces------------------------------------
 
-    buildAquarium()
+    //buildAquarium()
+    makeFish()
 
     // ------------------------------------------------------------------------------
 
 }
 
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+    println("Shark: ${shark.color}")
+    shark.eat()
+    println("Plecostomus: ${pleco.color}")
+    pleco.eat()
+}
 fun buildAquarium() {
 //    val aquarium=Aquarium()
 //    aquarium.printSize() // print class
