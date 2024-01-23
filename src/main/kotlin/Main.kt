@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.example.myapp.Aquarium
+import org.example.example.myapp.TowerTank
 import java.util.Random
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -91,6 +92,9 @@ fun buildAquarium() {
     aquarium5.printSize()
     aquarium5.volume = 70
     aquarium5.printSize()
+
+    val myTower = TowerTank(diameter = 25, height = 40)
+    myTower.printSize()
 }
 
 fun swim(speed: String = "fast") {

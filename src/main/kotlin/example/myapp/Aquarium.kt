@@ -12,7 +12,7 @@ package org.example.example.myapp
 //    var height:Int = height
 //    var length:Int = length
 
-class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- Compact version
+open class Aquarium(var width:Int=20, open var height:Int=40, var length:Int=100) { // <-- Compact version
 
     init {
         println("aquarium initializing")
@@ -29,7 +29,11 @@ class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- C
         this.height = (tank / (this.length * this.width)).toInt()
     }
 
-    var volume: Int
+    open val shape = "rectangle"
+    open var water: Double = 0.0
+        get() = volume * 0.9
+
+    open var volume: Int
         get() = width * height * length / 1000  // 1000 cm^3 = 1 l
         set(value) {
             height = (value * 1000) / (width * length)
@@ -40,7 +44,7 @@ class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- C
                 "Length: $length cm " +
                 "Height: $height cm ")
         // 1 l = 1000 cm^3
-        println("Volume: $volume l")
+        println("Volume: $volume l Water: $water l (${water/volume*100.0}% full)")
     }
 
 //    fun printSize():String = "Width: $width cm " +
