@@ -17,10 +17,10 @@ class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- C
     init {
         println("aquarium initializing")
     }
-    init {
-        // 1 liter = 1000 cm^3
-        println("Volume: ${width * length * height / 1000} l")
-    }
+//    init {
+//        // 1 liter = 1000 cm^3
+//        println("Volume: ${width * length * height / 1000} l")
+//    }
 
     constructor(numberOfFish: Int) : this() {
         // 2,000 cm^3 per fish + extra room so water doesn't spill
@@ -29,10 +29,15 @@ class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- C
         this.height = (tank / (this.length * this.width)).toInt()
     }
 
+    val volume: Int
+        get() = width * height * length / 1000  // 1000 cm^3 = 1 l
+
     fun printSize() { // <--- First version
         println("Width: $width cm " +
                 "Length: $length cm " +
                 "Height: $height cm ")
+        // 1 l = 1000 cm^3
+        println("Volume: $volume l")
     }
 
 //    fun printSize():String = "Width: $width cm " +
