@@ -5,7 +5,9 @@ import java.util.Random
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
+
+    // --------------------------- Loop traversal ---------------------------------------------
+    /*val name = "Kotlin"
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
 
@@ -14,27 +16,34 @@ fun main() {
         //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         println("i = $i")
-    }
+    }*/
+    // ------------------------------------------------------------------------------
 
-   // checkDatatypes()
+    // -----------------------------Data types and Nullability---------------------------------------------
+    // checkDatatypes()
     //checkNullables()
+    // ------------------------------------------------------------------------------
+
+
+    // ----------------------------Functions----------------------------------------------
     //checkFunctions()
-    
     //feedTheFish()
-   // swim()
+    //swim()
     //swim("slow")
     //swim(speed = "Turtle-like")
+    // ------------------------------------------------------------------------------
 
-    val decorations = listOf ("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+    // ---------------------------Filter and Lambda Expressions----------------------------------------
+    /*val decorations = listOf ("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
 
     // eager, creates a new list
     val eager = decorations.filter { it [0] == 'p' }
-    println("eager: $eager")
+    println("eager: $eager")*/
 
-//    val lazyMap2 = decorations.map {
-//        println("access: $it")
-//        it
-//    }
+   /* val lazyMap2 = decorations.map {
+        println("access: $it")
+        it
+    }*/
 
    /* val lazyMap = decorations.asSequence().map {
         println("access: $it")
@@ -47,12 +56,19 @@ fun main() {
     println("-----")
     println("all: ${lazyMap.toList()}")*/
 
-    val lazyMap2 = decorations.asSequence().filter {it[0] == 'p'}.map {
+    /*val lazyMap2 = decorations.asSequence().filter {it[0] == 'p'}.map {
         println("access: ${it}")
         it
     }
     println("-----")
-    println("filtered: ${lazyMap2.toList()}")
+    println("filtered: ${lazyMap2.toList()}")*/
+    // ------------------------------------------------------------------------------
+
+
+
+
+
+
 }
 
 fun swim(speed: String = "fast") {
