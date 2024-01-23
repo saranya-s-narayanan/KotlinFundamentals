@@ -89,6 +89,8 @@ fun buildAquarium() {
 
     val aquarium5=Aquarium(numberOfFish = 29)
     aquarium5.printSize()
+    aquarium5.volume = 70
+    aquarium5.printSize()
 }
 
 fun swim(speed: String = "fast") {

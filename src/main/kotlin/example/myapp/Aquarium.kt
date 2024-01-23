@@ -29,8 +29,11 @@ class Aquarium(var width:Int=20,var height:Int=40,var length:Int=100) { // <-- C
         this.height = (tank / (this.length * this.width)).toInt()
     }
 
-    val volume: Int
+    var volume: Int
         get() = width * height * length / 1000  // 1000 cm^3 = 1 l
+        set(value) {
+            height = (value * 1000) / (width * length)
+        }
 
     fun printSize() { // <--- First version
         println("Width: $width cm " +
