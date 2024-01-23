@@ -1,5 +1,6 @@
 package org.example
 
+import org.example.example.myapp.Aquarium
 import java.util.Random
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -40,21 +41,21 @@ fun main() {
     val eager = decorations.filter { it [0] == 'p' }
     println("eager: $eager")*/
 
-   /* val lazyMap2 = decorations.map {
-        println("access: $it")
-        it
-    }*/
+    /* val lazyMap2 = decorations.map {
+         println("access: $it")
+         it
+     }*/
 
-   /* val lazyMap = decorations.asSequence().map {
-        println("access: $it")
-        it
-    }
+    /* val lazyMap = decorations.asSequence().map {
+         println("access: $it")
+         it
+     }
 
-    println("lazy: $lazyMap")
-    println("-----")
-    println("first: ${lazyMap.first()}")
-    println("-----")
-    println("all: ${lazyMap.toList()}")*/
+     println("lazy: $lazyMap")
+     println("-----")
+     println("first: ${lazyMap.first()}")
+     println("-----")
+     println("all: ${lazyMap.toList()}")*/
 
     /*val lazyMap2 = decorations.asSequence().filter {it[0] == 'p'}.map {
         println("access: ${it}")
@@ -64,10 +65,19 @@ fun main() {
     println("filtered: ${lazyMap2.toList()}")*/
     // ------------------------------------------------------------------------------
 
+    // -----------------------Classes and Interfaces------------------------------------
 
+    buildAquarium()
 
+    // ------------------------------------------------------------------------------
 
+}
 
+fun buildAquarium() {
+    val aquarium=Aquarium()
+    println(aquarium.printSize()) // print class
+    aquarium.height=99 // update height
+    println(aquarium.printSize()) // print class
 
 }
 
@@ -120,13 +130,13 @@ fun checkFunctions() {
 
 fun checkNullables() {
     var x: Int? =null
-  /*  if(x!=null)
-        println("Var not null")
-    else
-        println("Var is null")*/
+    /*  if(x!=null)
+          println("Var not null")
+      else
+          println("Var is null")*/
 
     println("VAR is ${(x?.toInt())?.plus(1)}")
-  //  println("VAR is ${(x!!.toInt())?.plus(1)}")
+    //  println("VAR is ${(x!!.toInt())?.plus(1)}")
 
     println("VAR2 is ${x?.toInt() ?: 34}")
 
